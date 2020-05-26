@@ -1,0 +1,42 @@
+<div class=" jumbotron jumbotron-fluid text-center bg-danger text-light animate__animated animate__fadeInLeft" *ngIf="producto">
+    <h2>{{producto[0].NOMBRE}} <small>   {{producto[0].MARCA | capitalizar:true}}</small></h2>
+</div>
+<div class="row animate__animated animate__fadeInLeft " *ngIf="producto">
+    <div class="col-md-4">
+        <img [src]="producto[0].IMAGEN_150" alt="" class="img-thumbnail" style="width: 100%;height: 100%;">
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-danger mb-3" style="width: 100%;height: 100%;">
+            <div class="card-header"><small>{{producto[0].CATEGORIA}}</small></div>
+            <div class="card-body">
+                <h5 class="card-title">Descripción:</h5>
+                <p class="card-text">{{producto[0].DESCRIPCION }}</p>
+            </div>
+            <div class="card-footer">
+                <p><b>Precio $ {{producto[0].PRECIO_VENTA }} / {{producto[0].UNITID | capitalizar:true}}</b></p>
+                <button class="btn btn-primary btn-block mb-2" (click)="comprar()">
+                    Comprar
+                </button>
+                <button class="btn btn-warning btn-block" (click)="volver()">
+                    Volver al Inicio
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card" style="width: 100%;height: 100%;">
+            <div class="card-header">
+                Caracteristicas
+            </div>
+            <ul class="list-group list-group-flush">
+
+                <li class="list-group-item"><b>Categoria: </b><small> {{producto[0].CATEGORIA}}</small></li>
+                <li class="list-group-item"><b>Código :</b><small> {{producto[0].CODIGO}}</small></li>
+                <li class="list-group-item"><b>Marca: </b> <small>{{producto[0].MARCA}}</small></li>
+                <hr>
+
+            </ul>
+        </div>
+
+    </div>
+</div>

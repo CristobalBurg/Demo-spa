@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand" href="#">Cristobal Burgos -Test</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Ingrese un producto . . ." (keydown.enter)="buscarProducto(buscador.value)" #buscador>
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="button" (click)="buscarProducto(buscador.value)">Buscar Producto</button>
+        </form>
+
+    </div>
+</nav>
+<nav class="navbar navbar-light navbar-expand-lg sticky-top" style="background-color: #e3f2fd;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#categorias" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="categorias">
+        <ul class="navbar-nav mr-xl-auto">
+            <li class="nav-item active">
+                <button (click)="buscarPorCategoria('ACCESORIOS')" type="button" class="btn"><span class="badge badge-danger p-2">Accesorios</span></button>
+            </li>
+            <li class="nav-item active">
+                <button (click)="buscarPorCategoria('SUSPENSIONES')" type="button" class="btn"><span class="badge badge-danger p-2">Supenciones</span> </button>
+                <li class="nav-item active">
+                    <button (click)="buscarPorCategoria('CLIMATIZACION')" type="button" class="btn"><span class="badge badge-danger p-2">Climatización</span> </button>
+                </li>
+                <li class="nav-item active">
+                    <button (click)="buscarPorCategoria('SISTEMA NEUMATICO')" type="button" class="btn"><span class="badge badge-danger p-2">Neumáticos</span> </button>
+                </li>
+                <li class="nav-item active">
+                    <button (click)="buscarPorCategoria('LIMPIEZA Y PROTECCION')" type="button" class="btn"><span class="badge badge-danger p-2">Limpieza y Protección</span> </button>
+                </li>
+        </ul>
+    </div>
+
+</nav>

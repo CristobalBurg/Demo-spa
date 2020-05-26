@@ -1,0 +1,6 @@
+<h1 class="m-3">Busqueda de Productos por categoría: <small>{{categoria}}</small></h1>
+<hr>
+<div *ngIf="productos.length == 0" class="text-center m-5">
+    <app-loading></app-loading>
+</div>
+<app-formato-producto [productos]="productos"></app-formato-producto>

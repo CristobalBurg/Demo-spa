@@ -1,0 +1,7 @@
+<div class=" jumbotron jumbotron-fluid text-center bg-danger text-light mt-4">
+    <h2>DEMO SPA - Cristóbal Burgos</h2>
+</div>
+<div *ngIf="productos.length == 0" class="text-center m-5">
+    <app-loading></app-loading>
+</div>
+<app-formato-producto [productos]="productos"></app-formato-producto>

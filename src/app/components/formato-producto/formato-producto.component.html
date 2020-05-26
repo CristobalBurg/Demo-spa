@@ -1,0 +1,19 @@
+<div class="card-columns mx-5">
+    <div class="card border border-danger animate__animated animate__fadeInLeft" *ngFor="let producto of productos" style="max-width: 18rem;">
+        <div class="card-header">
+            <small>{{producto.CATEGORIA  }}</small>
+        </div>
+        <img [src]="producto.IMAGEN_150" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.NOMBRE}}</h5>
+            <p class="card-text">{{producto.DESCRIPCION }}</p>
+            <hr>
+            <p><b>Marca:</b> {{producto.MARCA}}</p>
+
+            <p><b>Precio: </b>${{producto.PRECIO_VENTA}}</p>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary btn-block" (click)="verDetalles(producto)">Ver Detalles</button>
+        </div>
+    </div>
+</div>

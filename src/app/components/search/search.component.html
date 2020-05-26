@@ -1,0 +1,7 @@
+<h1 class="m-3">Busqueda de Productos: <small>{{termino}}</small></h1>
+<hr>
+
+<div class="alert alert-info" *ngIf="productos.length == 0">
+    <h5>No se encontraron Productos que contengan : {{termino}}</h5>
+</div>
+<app-formato-producto [productos]="productos"></app-formato-producto>
